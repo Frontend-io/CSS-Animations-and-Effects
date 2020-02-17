@@ -105,16 +105,16 @@
 			border: 2px solid #5F7;
 		}
 		header{
+			width: 100%;
+			box-sizing: border-box;
 			display: flex;
 			justify-content: space-between;
-			height: 50px;
 			background: #fff;
 			border-bottom: 1.5px solid #ddd;
 			padding: 10px 20px;
 		}
 		header .img{
 			flex: 1.2;
-
 		}
 		header nav{
 			display: flex;
@@ -191,6 +191,16 @@
 			background: rgba(50, 200, 50);
 			border-radius: 100%;
 			animation: slide 8s linear infinite;
+		}
+		@keyframes slide{
+			from{
+				left: 0%
+			}
+			to{
+				left: 98%;
+			}
+		}
+		h1{
 			font-size: 70px
 		}
 		h4{
@@ -467,22 +477,12 @@
 			}
 			.landing.page-two{
 				flex-direction: column;
-
 			}
 			.landing .text{
 				padding: 25px;
 			}
 			.landing .text button{
 				margin-left: 10px;
-			}
-		}
-		}
-		@keyframes slide{
-			from{
-				left: 0%
-			}
-			to{
-				left: 98%;
 			}
 		}
 	</style>
