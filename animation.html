@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flexbox and Animation</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	<!-- <meta  http-equiv="refresh" content="1"> -->
+</head>
+<body>
+	<header>
+		<div class="img">
+			<img src="./img/logo.png" height="55" width="55" >
+		</div>
+		<nav>
+			<ul>
+				<li><a href="">Home</a></li>
+				<li><a href="">About</a></li>
+				<li><a href="">Contact</a></li>
+			</ul>
+			<div class="btns">
+				<button>Login</button>
+				<button class="outline-btn">Register</button>
+			</div>
+		</nav>
+	</header>
+	<div class="landing">
+		<div class="floating-box one"></div>
+		<div class="floating-box two"></div>
+		<div class="floating-box three"></div>
+		<div class="floating-box four"></div>
+		<div class="text">
+			<h1 class="title">CV Builder</h1>
+			<h4 class="green">Build your professional CVs today!</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud.</p>
+			<button>Get Started!</button>
+		</div>
+		<div class="image">
+			<img src="./img/layout.png">
+		</div>
+	</div>
+	<div class="landing page-two">
+		<div class="image">
+			<div class="overlay one">
+				<h2>Coding is fun</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis.</p>
+				<button>Visit Nigeria</button>
+			</div>
+			<img src="./img/layout.png">
+		</div>
+		<div class="image">
+			<div class="overlay two">
+				<h2>Welcome to Nigeria</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis.</p>
+				<button>Visit Nigeria</button>
+			</div>
+			<img src="./img/3.png">
+		</div>
+		<div class="image">
+			<div class="overlay three">
+				<h2>Animation is cool</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis.</p>
+				<button>Visit Nigeria</button>
+			</div>
+			<img src="./img/7.png">
+		</div>
+		<div class="image">
+			<div class="overlay four">
+				<h2>Animation is cool</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis.</p>
+				<button>Visit Nigeria</button>
+			</div>
+			<img src="./img/5.png">
+		</div>
+		<div class="image">
+			<div class="overlay five">
+				<h2>Animation is cool</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis.</p>
+				<button>Visit Nigeria</button>
+			</div>
+			<img src="./img/6.png">
+		</div>
+	</div>
+
+	<style type="text/css">
+		body{
+			padding: 0px;
+			margin: 0px;
+			font-family: nunito 
+		}
+		.outline-btn{
+			background: none;
+			border: 2px solid #5F7;
+		}
+		header{
+			display: flex;
+			justify-content: space-between;
+			height: 50px;
+			background: #fff;
+			border-bottom: 1.5px solid #ddd;
+			padding: 10px 20px;
+		}
+		header .img{
+			flex: 1.2;
+
+		}
+		header nav{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex: 2
+		}
+		header nav ul{
+			padding: 0px;
+			display: flex;
+		}
+		header nav li{
+			margin: 0px 15px;
+			list-style: none;
+		}
+		header nav li a{
+			text-decoration: none;
+			font-size: 18px;
+			color: #5f7;
+			font-weight: 600
+		}
+		header nav .btns{
+			display: flex;
+			flex-wrap: nowrap;
+		}
+		header nav button{
+			font-family: nunito;
+			color: #555;
+			margin: 0px 10px;
+			padding: 10px 20px;
+			box-shadow: 3px 3px 2px rgba(0,0,0,.1);
+			font-weight: 600;
+			transition: .5s;
+			cursor: pointer;
+		}
+		header nav button:hover{
+			box-shadow: none;
+			transition: .5s;
+		}
+		.landing{
+			display: flex;
+			height: 88vh;
+			align-items: center;
+			position: relative;
+		}
+		.landing > div{
+			flex: 1;
+		}
+		.landing .text{
+			padding: 20px;
+			padding-left: 50px;
+			box-sizing: border-box;
+		}
+		.landing .text .title{
+			max-width: 500px;
+			position: relative;
+		}
+		.landing .text .title:before{
+			content: "";
+			height: 10px;
+			width: 100%;
+			position: absolute;
+			bottom: 0px;
+			background: rgba(50, 200, 50, .2);
+			border-radius: 50px;
+		}
+		.landing .text .title:after{
+			content: "";
+			height: 25px;
+			width: 25px;
+			position: absolute;
+			bottom: -7px;
+			left: 0%;
+			background: rgba(50, 200, 50);
+			border-radius: 100%;
+			animation: slide 8s linear infinite;
+			font-size: 70px
+		}
+		h4{
+			font-size: 25px;
+		}
+		.landing .text h1,
+		h4{
+			padding: 0px;
+			margin: 5px 0px
+		}
+		.landing .text p{
+			font-size: 20px;
+		}
+		.landing .text button{
+			animation: beat 2s infinite;
+			position: relative;
+		}
+		@keyframes beat{
+			/*from{
+				background: red;
+			}
+			to{
+				background: yellow
+			}*/
+			/*0%{
+				transform: scale(1.01);
+			}*/
+			/*20%{
+				background: green;
+				transform: scale(1.04);
+			}
+			40%{
+
+			}
+			60%{
+				background: teal;
+				transform: scale(1.06);
+			}*/
+			0%{
+				transform: scale(1.05);
+			}
+			50%{
+				transform: scale(1.2);
+			}
+			55%{
+				transform: scale(1.3);
+			}
+			100%{
+				transform: scale(1.05);
+			}
+		}
+		.green{
+			color: #5A5
+		}
+		button{
+			border: none;
+			padding: 20px 30px;
+			border-radius: 3px;
+			background: #5F7;
+			font-weight: 800;
+			box-shadow: 0px 10px 20px rgba(85, 255, 119, .5);
+		}
+		.image{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.image img{
+			max-width: 80%;
+			height: auto;
+		}
+
+		/*Floating boxes*/
+		.landing .floating-box{
+			position: absolute;
+			opacity: .5;
+
+		}
+		.landing .floating-box.one{
+			top: 10%;
+			left: 10%;
+			animation: bounce 10s linear infinite;
+		}
+		@keyframes bounce{
+			0%{
+				top: 10%;
+				left: 10%;
+			}
+			25%{
+				top: 15%;
+				left: 30%;
+			}
+			50%{
+				top: 30%;
+				left: 20%;
+			}
+			75%{
+				top: 25%;
+				left: 10%;
+			}
+			/*100%{
+				top: 10%;
+				left: 10%;
+			}*/
+		}
+		.landing .floating-box.one:before{
+			border-color: navy
+		}
+		.landing .floating-box.two{
+			top: 80%;
+			left: 40%;
+		}
+		.landing .floating-box.two:before{
+			border-color: red
+		}
+		.landing .floating-box.three{
+			top: 30%;
+			left: 50%;
+			animation: spin 5s linear infinite;
+
+		}
+		.landing .floating-box.three:before,
+		.landing .floating-box.three:after{
+			border-color: orange;
+		}
+		.landing .floating-box.three:before{
+			animation: none;
+		}
+		.landing .floating-box.three:after{
+			content: "";
+			position: absolute;
+			top: -5px;
+			transform: rotate(-90deg);
+			left: 25px;
+			height: 15px;
+			width: 15px;
+			border-top: 3px solid orange;
+			border-left: 3px solid orange;
+		}
+		.landing .floating-box.four{
+			top: 30%;
+			left: 90%;
+		}
+		.landing .floating-box:before{
+			content: "";
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			height: 15px;
+			width: 15px;
+			border-top: 3px solid #5f5;
+			border-right: 3px solid #5f5;
+			animation: spin 5s linear infinite;
+		}
+		@keyframes spin{
+			from{
+				transform: rotate(0deg);
+			}
+			to{
+				transform: rotate(360deg);
+			}
+		}
+
+
+		/*Overlay*/
+		.landing.page-two{
+			justify-content: center;
+			width: 100%;
+			box-sizing: border-box;
+			flex-wrap: wrap !important;
+		}
+		.landing.page-two > div {
+			/*flex: 1;*/
+			min-width: 400px;
+			max-width: 400px;
+			margin: 10px;
+			position: relative;
+			overflow: hidden;
+		}
+		.landing.page-two > div .overlay{
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background: rgba(0,0,0,.6);
+			color: #fff;
+			padding: 20px;
+			box-sizing: border-box;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			visibility: hidden;
+			transition: .5s ease-out;
+			opacity: 0;
+		}
+		.landing.page-two .image:hover > .overlay{
+			visibility: visible;
+			transition: .5s;
+			opacity: 1;
+		}
+
+		/*Appear Effects*/
+
+		/*For effect one*/
+		.landing.page-two > div .overlay.one{
+			transform: translateY(100%);
+		}
+		.landing.page-two .image:hover > .overlay.one{
+			transform: translateY(0%);
+		}
+
+		/*For effect two*/
+		.landing.page-two > div .overlay.two{
+			transform: translateY(-100%);
+		}
+		.landing.page-two .image:hover > .overlay.two{
+			transform: translateY(0%);
+		}
+
+		/*For effect three*/
+		.landing.page-two > div .overlay.three{
+			transform: scale(0);
+		}
+		.landing.page-two .image:hover > .overlay.three{
+			transform: scale(1);
+		}
+		/*For effect four*/
+		.landing.page-two > div .overlay.four{
+			transform: rotateY(180deg);
+		}
+		.landing.page-two .image:hover > .overlay.four{
+			transform: rotateY(0deg);
+		}
+		/*For effect four*/
+		.landing.page-two > div .overlay.five{
+			transform: rotate(360deg);
+		}
+		.landing.page-two .image:hover > .overlay.five{
+			transform: rotate(0deg);
+		}
+
+		/*Overlay button*/
+		.landing.page-two > div .overlay button{
+			max-width: 50%;
+			margin: 0px auto
+		}
+
+		.landing.page-two > div .overlay h2{
+			padding: 0px;
+			margin: 0px;
+		}
+
+
+		@media(max-width: 768px){
+			header{
+				padding: 10px;
+				flex-wrap: wrap;
+				height: auto;
+				justify-content: space-between;
+			}
+			header nav{
+				justify-content: flex-end;
+			}
+			header nav ul:first-child{
+				display: none;
+			}
+			header nav .btns button{
+				padding: 8px 10px;
+				margin: 5px;
+			}
+			.landing{
+				flex-direction: column-reverse;
+				height: auto;
+			}
+			.landing.page-two{
+				flex-direction: column;
+
+			}
+			.landing .text{
+				padding: 25px;
+			}
+			.landing .text button{
+				margin-left: 10px;
+			}
+		}
+		}
+		@keyframes slide{
+			from{
+				left: 0%
+			}
+			to{
+				left: 98%;
+			}
+		}
+	</style>
+
+</body>
+</html>
